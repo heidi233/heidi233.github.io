@@ -27,7 +27,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/11/02/1.hexo搭建blog/14.PNG">
 <meta property="og:image" content="http://yoursite.com/2018/11/02/1.hexo搭建blog/15.PNG">
 <meta property="og:image" content="http://yoursite.com/2018/11/02/1.hexo搭建blog/16.PNG">
-<meta property="og:updated_time" content="2018-11-02T14:22:41.846Z">
+<meta property="og:updated_time" content="2018-11-02T14:33:26.904Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
 <meta name="twitter:description" content="hexo 搭建 blog搭建环境准备： 1.下载NodeJs安装文件：https://nodejs.org/en/ 下载完成后检查node是否安装正确，输入下面两条指令： 12node -vnpm -v 如果出现下图就代表安装成功：  2.安装Git：https://gitforwindows.org/ 下载完成后（全部NEXT就好），打开cmd命令行 ，检查Git是否安装正确，输入： 1git">
@@ -81,7 +81,7 @@
         <section id="main"><article id="post-1.hexo搭建blog" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/11/02/1.hexo搭建blog/" class="article-date">
-  <time datetime="2018-11-02T14:28:17.132Z" itemprop="datePublished">2018-11-02</time>
+  <time datetime="2018-11-02T14:33:38.133Z" itemprop="datePublished">2018-11-02</time>
 </a>
     
   </div>
@@ -123,15 +123,19 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /  #进入根目录</span><br><span class="line">pwd /</span><br><span class="line">npm install hexo-cli -g  #安装hexo</span><br></pre></td></tr></table></figure>
 <p>安装成功后，输入以下代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd /</span><br><span class="line">hexo init Hexo</span><br><span class="line">cd /Hexo</span><br><span class="line">npm instal</span><br><span class="line">hexo generate(或hexo g)</span><br><span class="line">hexo sever（或hexo s）</span><br></pre></td></tr></table></figure>
+<p>结果如图：</p>
 <img src="/2018/11/02/1.hexo搭建blog/6.PNG">
 <p>将最后的网址复制粘贴访问</p>
+<p>如图：</p>
 <img src="/2018/11/02/1.hexo搭建blog/7.PNG">
 <h4 id="6-上传hexo博客的静态文档到Github"><a href="#6-上传hexo博客的静态文档到Github" class="headerlink" title="6.上传hexo博客的静态文档到Github"></a>6.上传hexo博客的静态文档到Github</h4><p>第一步：查看hexo插件的版本</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+<p>结果如图：</p>
 <img src="/2018/11/02/1.hexo搭建blog/8.PNG">
 <p>若hexo版本大于3.0，需要执行该指令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -save hexo-deployer-git</span><br></pre></td></tr></table></figure>
 <p>第二步：打开电脑中的Hexo文件夹</p>
+<p>如图所示：</p>
 <img src="/2018/11/02/1.hexo搭建blog/9.PNG">
 <p>第三步：右键_config.yml用记事本打开</p>
 <p>在最后添加：</p>
@@ -145,19 +149,21 @@
 <img src="/2018/11/02/1.hexo搭建blog/14.PNG">
 <p>ps：对于图片无法显示问题：</p>
 <p>第一步：打开_config.yml文件，将第38行post_asset_folder: false 改为 post_asset_folder: true</p>
+<p>如图所示：</p>
 <img src="/2018/11/02/1.hexo搭建blog/15.PNG">
 <p>第二步：安装插件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+<p>结果如图：</p>
 <img src="/2018/11/02/1.hexo搭建blog/16.PNG">
 <p>第三步：引用图片</p>
 <p>在/source/_posts文件夹内再建一个同名文件夹存储图片，然后只需要在xxxx.md中按照markdown的格式引入图片：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img 1.jpg 这是一个新的博客的图片的说明 %&#125;  //hexo3用这种格式，而不是以前的![]()方法！</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img 1.jpg Kekse真机智！%&#125;  //hexo3用这种格式，而不是以前的![]()方法！</span><br></pre></td></tr></table></figure>
 <p>以上。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/02/1.hexo搭建blog/" data-id="cjo046dst0001j4vou8wxcu9o" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/02/1.hexo搭建blog/" data-id="cjo04dtgn000008vowz3j8s3h" class="article-share-link">Share</a>
       
       
     </footer>
